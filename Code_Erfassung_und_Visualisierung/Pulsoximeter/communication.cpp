@@ -76,8 +76,8 @@ void BLEExplorer::printData(const unsigned char data[], int length) {
 
   String hexString = "";
   for (int i = 0; i < length; i++) {
-    if (data[i] < 16) hexString += "0"; // fügt eine führende Null hinzu, wenn der Wert kleiner als 16 ist
-    hexString += String(data[i], HEX); // fügt den hexadezimalen Wert des Elements hinzu
+    if (data[i] < 16) hexString += "0"; // adds a leading zero if the value is less than 16
+    hexString += String(data[i], HEX); // adds the hexadecimal value of the item
   }
   
   if (length > 8 && data[2] == TYPE_PO_PARAM){
